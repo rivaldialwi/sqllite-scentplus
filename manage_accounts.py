@@ -43,6 +43,11 @@ def delete_user(user_id):
 def manage_accounts():
     st.title("Mengelola Akun")
 
+    # Tambahkan tombol Logout
+    if st.button("Logout"):
+        st.session_state['logged_in'] = False
+        st.experimental_rerun()
+
     # Menampilkan form untuk menambah pengguna baru
     st.subheader("Tambah Pengguna Baru")
     email = st.text_input("Email")

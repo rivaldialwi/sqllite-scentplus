@@ -23,7 +23,7 @@ def update_user_data(user_id, new_username, new_email, new_password):
     conn.close()
 
 def show_dialog(user_data):
-    user_id, username, email, password = user_data
+    user_id, email, username, password = user_data
     st.session_state['edit_username'] = username
     st.session_state['edit_email'] = email
     st.session_state['edit_password'] = password
@@ -44,6 +44,11 @@ def show_dialog(user_data):
 
 def run():
     st.title("Edit User Data")
+
+    # Tambahkan tombol Logout
+    if st.button("Logout"):
+        st.session_state['logged_in'] = False
+        st.experimental_rerun()
 
     if 'logged_in' in st.session_state and st.session_state['logged_in']:
         if 'username' not in st.session_state:

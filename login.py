@@ -23,10 +23,14 @@ def login():
         if validate_login(username, password, 'admin'):
             st.session_state['logged_in'] = True
             st.session_state['role'] = 'admin'
+            st.session_state['username'] = username
+            st.session_state['password'] = password
             st.experimental_rerun()
         elif validate_login(username, password, 'user'):
             st.session_state['logged_in'] = True
             st.session_state['role'] = 'user'
+            st.session_state['username'] = username
+            st.session_state['password'] = password
             st.experimental_rerun()
         else:
             st.error("Invalid username or password")

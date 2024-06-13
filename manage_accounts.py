@@ -65,7 +65,7 @@ def manage_accounts():
     col5.write("Action")
 
     for user in users:
-        col1, col2, col3, col4, col5, col6 = st.columns([2, 2, 2, 2, 2, 2])
+        col1, col2, col3, col4, col5, col6 = st.columns([2, 3, 2, 2, 2, 2])
         col1.write(user[0])
         col2.write(user[1])
         col3.write(user[2])

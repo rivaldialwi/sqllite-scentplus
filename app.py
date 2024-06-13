@@ -67,7 +67,7 @@ def convert_df_to_excel(df):
 
 # Fungsi untuk menjalankan aplikasi
 def run():
-    st.title("Aplikasi Analisis Sentimen Moris")
+    st.title("Aplikasi Analisis Sentimen Scentplus")
 
     tab1, tab2 = st.tabs(["Prediksi Satu Kalimat", "Prediksi File"])
 

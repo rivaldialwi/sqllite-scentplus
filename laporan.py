@@ -64,7 +64,7 @@ def clean_text(text):
 
 # Fungsi untuk menjalankan aplikasi
 def run():
-    st.title("Aplikasi Analisis Sentimen Moris")
+    st.title("Aplikasi Analisis Sentimen Scentplus")
 
     st.header("Unggah file untuk Grafik dan Word Cloud Sentimen")
     uploaded_excel = st.file_uploader("Unggah file Excel", type=["xlsx"], key="file_uploader_analysis")
